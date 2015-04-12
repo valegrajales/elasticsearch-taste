@@ -18,9 +18,19 @@ public class Evaluation {
 
     private long totalProcessingTime = 0;
 
-    private long maxProcessingTime = 0;
+    public double getStdDeviation() {
+			return stdDeviation;
+		}
+
+		public void setStdDeviation(final double stdDeviation) {
+			this.stdDeviation = stdDeviation;
+		}
+
+		private long maxProcessingTime = 0;
 
     private long averageProcessingTime = 0;
+    
+    private double stdDeviation = 0;
 
     public double getScore() {
         return score;

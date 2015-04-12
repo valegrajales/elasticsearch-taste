@@ -18,6 +18,7 @@
 package org.codelibs.elasticsearch.taste.eval;
 
 import org.codelibs.elasticsearch.taste.model.DataModel;
+import org.codelibs.elasticsearch.taste.writer.ResultWriter;
 
 /**
  * <p>
@@ -75,8 +76,19 @@ public interface RecommenderEvaluator {
      *         estimated preferences match real values; <em>lower</em> scores mean a better match and 0 is a
      *         perfect match
      */
-    double evaluate(RecommenderBuilder recommenderBuilder,
+    /*double evaluate(RecommenderBuilder recommenderBuilder,
             DataModelBuilder dataModelBuilder, DataModel dataModel,
-            double trainingPercentage, double evaluationPercentage);
+            double trainingPercentage, double evaluationPercentage);*/
+	
+		Evaluation evaluate(RecommenderBuilder recommenderBuilder,
+				DataModel dataModel, EvaluationConfig config);
+    
+    void setResultWriter(ResultWriter resultWriter);
+    
+    void setId(String id);
+
+    String getId();
+    
+    void interrupt();
 
 }

@@ -35,6 +35,7 @@ import org.codelibs.elasticsearch.taste.model.PreferenceArray;
 import org.codelibs.elasticsearch.taste.recommender.IDRescorer;
 import org.codelibs.elasticsearch.taste.recommender.RecommendedItem;
 import org.codelibs.elasticsearch.taste.recommender.Recommender;
+import org.codelibs.elasticsearch.taste.writer.ResultWriter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -244,5 +245,29 @@ public final class GenericRecommenderIRStatsEvaluator implements
     private static double log2(final double value) {
         return Math.log(value) / LOG2;
     }
+
+		@Override
+		public void setResultWriter(ResultWriter resultWriter) {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public void setId(String id) {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public String getId() {
+			// TODO Auto-generated method stub
+			return null;
+		}
+
+		@Override
+		public void interrupt() {
+			// TODO Auto-generated method stub
+			
+		}
 
 }

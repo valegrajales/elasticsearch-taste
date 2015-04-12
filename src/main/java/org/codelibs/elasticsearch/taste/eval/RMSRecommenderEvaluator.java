@@ -20,6 +20,7 @@ package org.codelibs.elasticsearch.taste.eval;
 import org.codelibs.elasticsearch.taste.common.FullRunningAverage;
 import org.codelibs.elasticsearch.taste.common.RunningAverage;
 import org.codelibs.elasticsearch.taste.model.Preference;
+import org.codelibs.elasticsearch.taste.writer.ResultWriter;
 
 /**
  * <p>
@@ -54,5 +55,6 @@ public final class RMSRecommenderEvaluator extends
     public String toString() {
         return "RMSRecommenderEvaluator";
     }
+    
 
 }

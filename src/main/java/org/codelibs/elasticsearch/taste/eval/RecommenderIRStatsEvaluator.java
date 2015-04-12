@@ -19,6 +19,7 @@ package org.codelibs.elasticsearch.taste.eval;
 
 import org.codelibs.elasticsearch.taste.model.DataModel;
 import org.codelibs.elasticsearch.taste.recommender.IDRescorer;
+import org.codelibs.elasticsearch.taste.writer.ResultWriter;
 
 /**
  * <p>
@@ -54,5 +55,12 @@ public interface RecommenderIRStatsEvaluator {
             DataModelBuilder dataModelBuilder, DataModel dataModel,
             IDRescorer rescorer, int at, double relevanceThreshold,
             double evaluationPercentage);
+    
+    void setResultWriter(ResultWriter resultWriter);
+    
+    void setId(String id);
 
+    String getId();
+    
+    void interrupt();
 }
